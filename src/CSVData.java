@@ -1,4 +1,9 @@
-
+/***
+ * This is a helper class to read CSV data.
+ * 
+ * @author oshorab971
+ *
+ */
 public class CSVData {
 	private double[][] data;
 	private String[] columnNames;
