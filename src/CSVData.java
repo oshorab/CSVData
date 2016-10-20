@@ -59,8 +59,19 @@ public class CSVData {
 	}
 
 	public double[] getColumn(int colIndex) {
-		double 
-		return null;
+		double[] colArr = new double[data.length];
+
+		for (int i = 0; i < colArr.length; i++) {
+			colArr[i] = data[i][colIndex];
+		}
+
+		return colArr;
+	}
+
+	public void setCol(double[] colArr, int colIndex) {
+		for (int i = 0; i < colArr.length; i++) {
+			data[i][colIndex] = colArr[i];
+		}
 	}
 
 	public double[] getColumn(String name) {
@@ -71,8 +82,8 @@ public class CSVData {
 		return null;
 	}
 
-	public double[][] getRows(int[] rowIndexes) {
-		return null;
-	}
+	// public double[][] getRows(int[] rowIndexes) {
+	return null;
+}
 
 }
