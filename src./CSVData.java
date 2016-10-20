@@ -52,7 +52,14 @@ public class CSVData {
 		return rowArr;
 	}
 
+	public void setRow(double[] rowArr, int rowIndex) {
+		for (int i = 0; i < rowArr.length; i++) {
+			data[rowIndex][i] = rowArr[i];
+		}
+	}
+
 	public double[] getColumn(int colIndex) {
+		double 
 		return null;
 	}
 
