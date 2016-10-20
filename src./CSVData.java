@@ -7,6 +7,8 @@
 public class CSVData {
 	private double[][] data;
 	private String[] columnNames;
+	private String filePathToCSV;
+	private int numRows;
 
 	public CSVData(String filepath, String[] columnNames, int startRow) {
 		this.filePathToCSV = filepath;
@@ -42,8 +44,12 @@ public class CSVData {
 	}
 
 	public double[] getRow(int rowIndex) {
+		double[] rowArr = new double[data[rowIndex].length];
+		for (int i = 0; i < rowArr.length; i++) {
+			rowArr[i] = data[rowIndex][i];
+		}
 
-		return this.data[rowIndex];
+		return rowArr;
 	}
 
 	public double[] getColumn(int colIndex) {
