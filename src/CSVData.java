@@ -79,11 +79,15 @@ public class CSVData {
 	}
 
 	public double[][] getRows(int startIndex, int endIndex) {
-		return null;
+		double[][] rowsArr = new double[endIndex - startIndex][data[0].length];
+		for(int i = startIndex; i < endIndex; i++) {
+			rowsArr[i] = data[i];
+		}
+		return rowsArr;
 	}
 
 	// public double[][] getRows(int[] rowIndexes) {
-	return null;
+	//return null;
 }
 
 }
