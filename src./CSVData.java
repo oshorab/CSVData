@@ -80,14 +80,21 @@ public class CSVData {
 
 	public double[][] getRows(int startIndex, int endIndex) {
 		double[][] rowsArr = new double[endIndex - startIndex][data[0].length];
-		for(int i = startIndex; i < endIndex; i++) {
+		for (int i = startIndex; i < endIndex; i++) {
 			rowsArr[i] = data[i];
 		}
 		return rowsArr;
 	}
 
 	// public double[][] getRows(int[] rowIndexes) {
-	//return null;
-}
+	// return null;
 
+
+	public double[][] getColumns(int startIndex, int endIndex) {
+		double[][] ColsArr = new double[data.length][endIndex - startIndex];
+		for(int i = startIndex; i <= endIndex; i++) {
+			ColsArr[i] = getColumn(i);
+		}
+		
+		return ColsArr;
 }
